@@ -9,3 +9,4 @@ This is a demo app for testing CRUD operations using REDUX for state management 
 * To run the ReactJS application, run the `npm start` command
 
 
+<img class="img img-thumbnail img-responsive" src="demo.gif">

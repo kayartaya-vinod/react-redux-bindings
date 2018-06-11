@@ -31,52 +31,10 @@
       "phone": "3717343623"
     },
     {
-      "id": 6,
-      "name": "Gwendolin Collingwood",
-      "email": "gcollingwood5@ycombinator.com",
-      "phone": "2034873652"
-    },
-    {
-      "id": 7,
-      "name": "Emmit Kaminski",
-      "email": "ekaminski6@dailymail.co.uk",
-      "phone": "4637734601"
-    },
-    {
-      "id": 8,
-      "name": "Lisette Iacovuzzi",
-      "email": "liacovuzzi7@independent.co.uk",
-      "phone": "6005331338"
-    },
-    {
-      "id": 9,
-      "name": "Vania Khotler",
-      "email": "vkhotler8@51.la",
-      "phone": "4273131125"
-    },
-    {
-      "id": 10,
-      "name": "Winn Tibols",
-      "email": "wtibols9@hostgator.com",
-      "phone": "3048515148"
-    },
-    {
       "name": "Vinod",
       "email": "vinod@vinod.co",
       "phone": "9731424784",
-      "id": 11
-    },
-    {
-      "name": "John Doe",
-      "email": "johndoe@example.com",
-      "phone": "5558370033",
-      "id": 12
-    },
-    {
-      "name": "Jane Doe",
-      "email": "janedoe@example.com",
-      "phone": "5556728822",
-      "id": 13
+      "id": 6
     }
   ]
 }
