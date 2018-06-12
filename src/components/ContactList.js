@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { fetchContacts } from '../actions';
 import { connect } from 'react-redux';
+import {deleteContact} from '../actions';
+
 class ContactList extends Component {
     state = {}
 
@@ -9,6 +11,9 @@ class ContactList extends Component {
         this.props.fetchContacts();
     }
 
+    handleDelete(id) {
+        this.props.deleteContact(id);
+    }
 
 
     render() {
@@ -19,7 +24,13 @@ class ContactList extends Component {
 
         let ContactRows = this.props.contacts.map(contact =>
             <tr key={contact.id}>
-                <td>{contact.name}</td>
+                <td>
+                <a href="javascript:void(0)" 
+                    onClick={this.handleDelete.bind(this, contact.id)}
+                    style={{marginRight: '10px'}}>
+                    <span className="glyphicon glyphicon-trash"></span>
+                </a>
+                {contact.name}</td>
                 <td>{contact.email}</td>
                 <td>{contact.phone}</td>
             </tr>
@@ -51,14 +62,14 @@ class ContactList extends Component {
 
 ContactList.propTypes = {
     contacts: PropTypes.array.isRequired,
-    fetchContacts: PropTypes.func.isRequired
+    fetchContacts: PropTypes.func.isRequired,
+    deleteContact: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
-    console.log('>>>>', state);
     return {
         contacts: state.contacts
     }
 }
 
-export default connect(mapStateToProps, { fetchContacts })(ContactList);
+export default connect(mapStateToProps, { fetchContacts, deleteContact })(ContactList);

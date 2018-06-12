@@ -13,18 +13,6 @@
       "phone": "3958475514"
     },
     {
-      "id": 3,
-      "name": "Silas Sprulls",
-      "email": "ssprulls2@hibu.com",
-      "phone": "7713267662"
-    },
-    {
-      "id": 4,
-      "name": "Beckie Grane",
-      "email": "bgrane3@tripod.com",
-      "phone": "6871094985"
-    },
-    {
       "id": 5,
       "name": "Stephana Dickens",
       "email": "sdickens4@eventbrite.com",
@@ -35,6 +23,18 @@
       "email": "vinod@vinod.co",
       "phone": "9731424784",
       "id": 6
+    },
+    {
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "phone": "5556782345",
+      "id": 7
+    },
+    {
+      "name": "Jane Doe",
+      "email": "janedoe@xmpl.com",
+      "phone": "5557823465",
+      "id": 8
     }
   ]
 }
