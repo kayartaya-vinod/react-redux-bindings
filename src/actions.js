@@ -35,6 +35,16 @@ function removeContactFromStore(id) {
 // 1. fetchContacts
 // 2. saveContact
 // 3. deleteContact
+// These functions are connected to components as props and are subsequently called in the components.
+// For example, in the ContactList component, the following statement connects 
+// two of these actions (fetchContacts and deleteContact) to the compnent:
+// ---------------
+// export default connect(mapStateToProps, { fetchContacts, deleteContact })(ContactList);
+// ---------------
+// ..and are called like this:
+// componentDidMount() { this.props.fetchContacts(); }
+// and
+// handleDelete(id) { this.props.deleteContact(id); }
 
 export function fetchContacts() {
     return (dispatch) =>
