@@ -1,6 +1,16 @@
+// ACTION TYPES: 
+
 export const SET_CONTACTS = 'SET_CONTACTS';
 export const ADD_CONTACT = 'ADD_CONTACT';
 export const REMOVE_CONTACT = 'REMOVE_CONTACT';
+
+const url = 'http://localhost:5000/contacts/';
+
+// ACTION CREATORS:
+// helper methods, called by the dispatch(..) in thunk actions, after the async call is finished
+// 1. setContactsInStore
+// 2. addContactToStore
+// 3. removeContactFromStore
 
 function setContactsInStore(contacts) {
     return {
@@ -8,14 +18,12 @@ function setContactsInStore(contacts) {
         contacts
     }
 }
-
 function addContactToStore(contact) {
     return {
         type: ADD_CONTACT,
         contact
     }
 }
-
 function removeContactFromStore(id) {
     return {
         type: REMOVE_CONTACT,
@@ -23,8 +31,10 @@ function removeContactFromStore(id) {
     }
 }
 
-const url = 'http://localhost:5000/contacts/';
-
+// THUNK ACTIONS:
+// 1. fetchContacts
+// 2. saveContact
+// 3. deleteContact
 
 export function fetchContacts() {
     return (dispatch) =>

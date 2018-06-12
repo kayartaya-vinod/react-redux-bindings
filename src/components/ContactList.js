@@ -4,6 +4,9 @@ import { fetchContacts } from '../actions';
 import { connect } from 'react-redux';
 import {deleteContact} from '../actions';
 
+
+
+
 class ContactList extends Component {
     state = {}
 
@@ -14,7 +17,6 @@ class ContactList extends Component {
     handleDelete(id) {
         this.props.deleteContact(id);
     }
-
 
     render() {
 
@@ -60,16 +62,19 @@ class ContactList extends Component {
     }
 }
 
+// declare the props of this component
 ContactList.propTypes = {
     contacts: PropTypes.array.isRequired,
     fetchContacts: PropTypes.func.isRequired,
     deleteContact: PropTypes.func.isRequired
 }
 
+// let redux know what properties of the store's state we need in this component
 function mapStateToProps(state) {
     return {
         contacts: state.contacts
     }
 }
 
+// this is where the store and actions are connected with this UI component
 export default connect(mapStateToProps, { fetchContacts, deleteContact })(ContactList);
